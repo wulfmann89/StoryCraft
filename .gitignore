@@ -1,0 +1,69 @@
+---
+
+## 🛡️ .gitignore (Python + VS Code + Jupyter + Logs)
+
+```gitignore
+
+# Python
+
+_pycache_/
+
+*.py[cod]
+
+*.pyo
+
+*.pyd
+
+*.so
+
+*.egg
+
+*.egg-info/
+
+dist/
+
+build/
+
+venv/
+
+.env
+
+.env.*
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# VS Code
+
+.vscode/
+
+# Logs and metadata
+
+logs/
+
+*.log
+
+focus_sessions.json
+
+# OS-specific
+
+.DS_Store
+
+Thumbs.db
+
+# Docker
+
+*.dockerfile
+
+docker-compose.yml
+
+# Coverage and testing
+
+.coverage
+
+htmlcov/
+
+.cache/
+
+.pytest_cache/
