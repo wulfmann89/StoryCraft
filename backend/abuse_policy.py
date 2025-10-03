@@ -34,4 +34,6 @@ def get_user_incidents(user_id: str) -> list:
         return[]
     with open(ABUSE_LOG_PATH, "r") as f:
         log= json.load(f)
-        return[entry for entry in log if entry == user_id]
+        if user_id == "*":
+            return log
+        return[entry for entry in log if entry[user_id] == user_id]
