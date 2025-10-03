@@ -6,7 +6,7 @@ from entity_highlighter.highlight import highlight_entities
 import spacy
 from ui_config.format_bar import build_format_bar
 from ui_config.layout import apply_theme, add_padding, set_default_font
-from dictionary.dictionary import show_definition, lookup_word
+from appearance.dictionary.dictionary import show_definition, lookup_word
 from entity_rec_profiler.entity_recognition import extract_entities
 from entity_rec_profiler.profile_generator import generate_profile
 from entity_rec_profiler.timeline_inference import extract_explicit_dates, infer_sequence
@@ -212,7 +212,7 @@ class WordProcessor:                                                            
             self.focus_mode_active = False
             self.timer_canvas.create_text(50, 50, text="Done!", fill="white", font=("Helvetica", 12))
             log_session(self.focus_session_start, datetime.now(), interrupted=False)
-        show_break_reminder()
+            show_break_reminder()
 
     def stop_focus_session(self):                                                                                      # Stop focus session and log
         from focus_mode.session_logger import log_session
